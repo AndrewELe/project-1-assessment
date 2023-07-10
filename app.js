@@ -5,13 +5,17 @@ const decrease = document.getElementById('#decrease')
 
 
 
-increase.addEventListener('click', function () {
+increase.addEventListener('click', increase)
+
+function increase(){
     displayNum += userInput
     document.querySelector('#number').textContent = number
     document.querySelector('#counter').textContent = displayNum
-})
+}
 
-decrease.addEventListener('click', function () {
+decrease.addEventListener('click', decrease)
+
+function decrease() {
     displayNum -= userInput
     document.querySelector('#number').textContent = number
     //if number is less than 0, change the color to red
@@ -19,5 +23,5 @@ decrease.addEventListener('click', function () {
         document.querySelector('#number').style.color = 'red'
     }
     document.querySelector('#counter').textContent = displayNum
-})
+}
 
